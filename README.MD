@@ -4,50 +4,6 @@
 
 A lightweight data ingestion pipeline built in Python that demonstrates core data engineering concepts: HTTP-based data ingestion, parallel file downloads, data validation, ZIP extraction and cleanup, and containerized execution using Docker. It simulates a real-world ingestion layer used in modern data platforms.
 
----
-
-## 🏗️ Architecture
-
-┌────────────────────┐
-│  HTTP Data Sources  │
-│   (ZIP File URLs)  │
-└────────┬───────────┘
-│
-▼
-┌──────────────────────────┐
-│   Downloader (Python)    │
-│   · requests             │
-│   · ThreadPoolExecutor   │
-└──────────┬───────────────┘
-│
-▼
-┌──────────────────────────────┐
-│  Local Storage (downloads/)  │
-│  · Raw ZIP files             │
-└──────────┬───────────────────┘
-│
-▼
-┌───────────────────────────────┐
-│     Validation Layer          │
-│     · File integrity checks   │
-│     · ZIP verification        │
-└──────────┬────────────────────┘
-│
-▼
-┌───────────────────────────────┐
-│     Unzip Processor           │
-│     · Extract CSV files       │
-│     · Remove invalid archives │
-└──────────┬────────────────────┘
-│
-▼
-┌────────────────────────────┐
-│  Clean Data Ready          │
-│  for Analytics / DB        │
-└────────────────────────────┘
-
----
-
 ## ⚙️ Features
 
 - ⚡ **Concurrent downloads** using `ThreadPoolExecutor`
