@@ -62,10 +62,10 @@ python main.py
 
 ```bash
 # Build image
-docker build -t http-ingestion-pipeline .
+docker build 
 
 # Run container
-docker run http-ingestion-pipeline
+docker run 
 ```
 
 ## 🧪 Docker Compose (Recommended)
