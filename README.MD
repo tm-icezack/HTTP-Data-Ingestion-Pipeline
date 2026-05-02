@@ -19,11 +19,17 @@ A lightweight data ingestion pipeline built in Python that demonstrates core dat
 http-data-ingestion-pipeline/
 │
 ├── main.py                 # Core ingestion pipeline
+
 ├── downloads/              # Raw + extracted files
+
 ├── requirements.txt        # Python dependencies
+
 ├── Dockerfile              # Container build
+
 ├── docker-compose.yml      # Multi-service setup
+
 ├── .dockerignore           # Docker exclusions
+
 └── README.md
 
 ---
