@@ -1,4 +1,4 @@
-HTTP Data Ingestion Pipeline
+📦 HTTP Data Ingestion Pipeline
 
 📌 Overview
 
@@ -50,15 +50,13 @@ It simulates a real-world ingestion layer used in modern data platforms.
         │ Clean Data Ready   │
         │ for Analytics / DB │
         └────────────────────┘
-
-
 ⚙️ Features
 ⚡ Concurrent downloads using ThreadPoolExecutor
 📦 Automated ZIP extraction
 🧹 Post-processing cleanup of archives
 🛡️ File validation (ZIP integrity checks)
 🐳 Dockerized environment for reproducibility
-
+🔁 Fault-tolerant design (skip bad files, continue pipeline)
 
 📂 Project Structure
 http-data-ingestion-pipeline/
@@ -70,7 +68,6 @@ http-data-ingestion-pipeline/
 ├── docker-compose.yml      # Multi-service setup
 ├── .dockerignore           # Docker exclusions
 └── README.md
-
 
 🚀 How It Works
 1. Ingestion
@@ -84,14 +81,14 @@ Extracts ZIP files into target directory
 Removes processed archives
 4. Output
 Clean CSV datasets ready for downstream analytics
+
 ▶️ Run Locally
 pip install -r requirements.txt
 python main.py
 
-
 🐳 Run with Docker
 Build image
-docker build .
+docker build 
 
 🧪 Docker Compose (Recommended)
 docker compose up --build
