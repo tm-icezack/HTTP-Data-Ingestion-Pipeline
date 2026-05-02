@@ -17,7 +17,8 @@ A lightweight data ingestion pipeline built in Python that demonstrates core dat
 
 ## 📂 Project Structure
 http-data-ingestion-pipeline/
-│
+
+
 ├── main.py                 # Core ingestion pipeline
 
 ├── downloads/              # Raw + extracted files
