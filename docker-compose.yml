@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: http_pipeline_app
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python main.py
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pipeline_db
+    ports:
+      - "5432:5432"
